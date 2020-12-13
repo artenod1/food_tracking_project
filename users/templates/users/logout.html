@@ -1,0 +1,11 @@
+{% extends "recipe_book/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+	<h2>You have been logged out</h2>
+	<div class="border-top pt-3">
+		<a class="btn btn-outline-secondary" href="{% url 'login' %}">Login</a>
+	</div>
+
+
+{% endblock content %}

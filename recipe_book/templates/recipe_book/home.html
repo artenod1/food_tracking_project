@@ -1,0 +1,29 @@
+{% extends "recipe_book/base.html" %}
+{% block content %}
+
+	<div>
+		<h1>Recipe Book</h1>	
+	</div>
+
+	<div>
+		<a class="btn btn-outline-dark" href="{% url 'recipe-create' %}">Create New Recipe</a>
+	</div>
+	
+
+	{% for recipe in object_list %}
+
+		<article>
+			<div>
+				<span>Creator: <a href="#">{{ recipe.author }}</a></span>
+				<small>created: {{ recipe.date_created }}</small>
+				<small>last updated: {{ recipe.date_updated }}</small>
+			</div>
+			<a class="article-title" href="{% url 'recipe-detail' recipe.id %}">{{ recipe.recipe_name }}</a>
+			<p><h3>Description</h3>{{ recipe.description }}</p>
+			<p><h3>Instructions</h3>{{ recipe.instructions }}</p>
+		</article>
+
+	{% endfor %}
+
+
+{% endblock content %}

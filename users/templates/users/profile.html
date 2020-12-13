@@ -1,0 +1,32 @@
+{% extends "recipe_book/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+	<article class="content-section">
+		<div>
+			<h1>{{ user.username }}</h1>
+			<img class="account-img" src="{{ user.profile.image.url }}">
+		</div>
+		
+		<a id="form-button" class="btn btn-outline-secondary">Edit Profile Info</a>
+
+		<form id="profile-form" class="" method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+			<fieldset>
+				<legend class="border-bottom mb-4">Profile Info</legend>
+				{{ u_form|crispy }}
+				{{ p_form|crispy }}
+			</fieldset>
+			<div class="form-group">
+				<button class="btn btn-outline-info" type="submit">Update</button>
+			</div>
+			
+		</form>
+		
+	</article>
+	
+		
+	
+	<script src="{% static 'users/users.js' %}" type="text/javascript"></script>
+{% endblock content %}

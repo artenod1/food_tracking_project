@@ -1,0 +1,24 @@
+{% extends "recipe_book/base.html" %}
+{% block content %}
+
+	<article>
+		<div>
+			<span>Creator: <a href="#">{{ object.author }}</a></span>
+			<small>created: {{ object.date_created }}</small>
+			<small>last updated: {{ object.date_updated }}</small>
+			<span class="content">
+				{% if object.author == user %}
+					<a class="btn btn-outline-dark" href="{% url 'recipe-update' object.id %}">Edit Recipe</a>
+					<a class="btn btn-outline-secondary" href="{% url 'recipe-delete' object.id %}">Delete Recipe</a>
+				{% endif %}
+			</span>
+		</div>
+		<a class="article-title" href="#">{{ object.recipe_name }}</a>
+		<p><h3>Description</h3>{{ object.description }}</p>
+		<p><h3>Instructions</h3>{{ object.instructions }}</p>
+
+		<h2>Ingredients</h2>
+		
+	</article>
+
+{% endblock content %}

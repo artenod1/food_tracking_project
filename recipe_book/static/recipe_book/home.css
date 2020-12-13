@@ -1,0 +1,75 @@
+body {
+	background-color: rgba(255, 228, 194, .3);
+	color: rgb(255, 144, 59);
+	
+}
+
+article {
+	width: 25cm;
+	margin-left: 200px;
+	margin-top: 40px;
+	padding: 10px 20px;
+	background-color: white;
+	border: 1px solid #dddddd;
+}
+
+
+a {
+	color: rgb(117, 91, 72);
+}
+
+a:hover {
+	color: rgb(255, 144, 59);
+}
+
+article small {
+	padding-left: 40px;
+}
+
+article a {
+	font-size: 2em;
+}
+
+
+
+.navbar-custom {
+	background-color: rgba(255, 228, 194, .8);
+	color: rgb(117, 91, 72);
+}
+
+
+.content-section {
+	padding: 10px 20px;
+	border: 1px solid rgba(117, 91, 72, .2);
+	border-radius: 3px;
+	margin-bottom: 20px;
+}
+
+.content {
+	padding-left: 10px;
+}
+
+.article-title {
+	margin: auto;
+	text-align: center;
+}
+
+.account-img {
+	height: 125px;
+	width: 200px;
+	margin-right: 20px;
+	margin-bottom: 16px;
+}
+
+#profile-form {
+	display:none;
+}
+
+
+
+
+
+
+
+
+
