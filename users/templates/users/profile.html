@@ -6,11 +6,17 @@
 	<article class="content-section">
 		<div>
 			<h1>{{ user.username }}</h1>
+
 			<img class="account-img" src="{{ user.profile.image.url }}">
 		</div>
+		<div>
+			<a class="btn btn-outline-success" href="{% url 'user-recipes' user.username %}">See Recipes</a>
+		</div>
+		<div>
+			<a id="form-button" class="btn btn-outline-secondary">Edit Profile Info</a>
+			<a class="btn btn-outline-secondary" href="{% url 'password_change' %}">Change Password</a>
+		</div>
 		
-		<a id="form-button" class="btn btn-outline-secondary">Edit Profile Info</a>
-		<a class="btn btn-outline-secondary" href="{% url 'password_change' %}">Change Password</a>
 
 		<form id="profile-form" class="" method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
@@ -26,6 +32,8 @@
 		</form>
 		
 	</article>
+
+	
 	
 		
 	
