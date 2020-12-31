@@ -10,6 +10,7 @@
 		</div>
 		
 		<a id="form-button" class="btn btn-outline-secondary">Edit Profile Info</a>
+		<a class="btn btn-outline-secondary" href="{% url 'password_change' %}">Change Password</a>
 
 		<form id="profile-form" class="" method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
