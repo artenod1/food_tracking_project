@@ -1,53 +1,37 @@
 {% extends "recipe_book/base.html" %}
+
 {% block content %}
 
-	<div>
+	<div id="title">
 		<h1>Recipe Book</h1>	
 	</div>
 
-	<div>
-		<a class="btn btn-outline-dark" href="{% url 'recipe-create' %}">Create New Recipe</a>
-	</div>
 	
-
-	{% for recipe in object_list %}
-
-		<article>
-			<div>
-				<span>Creator: <a href="{% url 'user-recipes' recipe.author.username %}">{{ recipe.author }}</a></span>
-				<small>created: {{ recipe.date_created }}</small>
-				<small>last updated: {{ recipe.date_updated }}</small>
+	<main class="container">
+		<div class="row">
+			<div class="col-lg-9">
+				{% for recipe in object_list %}
+					<article class="container recipe-content">
+						<div class="recipe-header">
+							<div>
+								<a href="{% url 'user-recipes' recipe.author.username %}">{{ recipe.author }}</a>
+							</div>
+							<div>
+								<small>posted: {{ recipe.date_created.date }}</small>
+							</div>
+						</div>
+						<div class="recipe-title">
+							<a href="{% url 'recipe-detail' recipe.id %}">{{ recipe.recipe_name }}</a>
+						</div>
+						<div class="recipe-body">
+							<p><h3>Description</h3>{{ recipe.description }}</p>
+							<p><h3>Instructions</h3>{{ recipe.instructions }}</p>
+						</div>
+					</article>
+				{% endfor %}
 			</div>
-			<a class="article-title" href="{% url 'recipe-detail' recipe.id %}">{{ recipe.recipe_name }}</a>
-			<p><h3>Description</h3>{{ recipe.description }}</p>
-			<p><h3>Instructions</h3>{{ recipe.instructions }}</p>
-		</article>
-
-	{% endfor %}
-
-	{% if is_paginated %}
-	<div>
-		<span>
-			{% if page_obj.has_previous %}
-				<a class="" href="?page=1">&laquo; First</a>
-				<a class="" href="?page={{ page_obj.previous_page_number }}">Previous</a>
-			{% endif %}
-
-			{% for num in page_obj.paginator.page_range %}
-				{% if page_obj.number == num %}
-					<a class="" href="?page={{ num }}">{{ num }}</a>
-				{% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
-					<a class="" href="?page={{ num }}">{{ num }}</a>
-				{% endif %}
-			{% endfor %}
-
-			{% if page_obj.has_next %}
-				<a class="" href="?page={{ page_obj.next_page_number }}">Next</a>
-				<a class="" href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
-			{% endif %}
-		</span>
-	</div>
-	{% endif %}
+		</div>
+	</main>
 
 
 {% endblock content %}

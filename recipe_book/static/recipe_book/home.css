@@ -4,14 +4,6 @@ body {
 	
 }
 
-article {
-	width: 25cm;
-	margin-left: 200px;
-	margin-top: 40px;
-	padding: 10px 20px;
-	background-color: white;
-	border: 1px solid #dddddd;
-}
 
 
 a {
@@ -20,50 +12,49 @@ a {
 
 a:hover {
 	color: rgb(255, 144, 59);
+	text-decoration: none;
 }
-
-article small {
-	padding-left: 40px;
-}
-
-article a {
-	font-size: 2em;
-}
-
-
 
 .navbar-custom {
 	background-color: rgba(255, 228, 194, .8);
-	color: rgb(117, 91, 72);
 }
 
-
-.content-section {
-	padding: 10px 20px;
-	border: 1px solid rgba(117, 91, 72, .2);
-	border-radius: 3px;
-	margin-bottom: 20px;
+.custom-nav-link {
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
-.content {
-	padding-left: 10px;
+.recipe-content {
+	background-color: white;
+	border: .5px rgba(117, 91, 72, .3) solid;
+	border-radius: 10px;
+	margin: 50px 400px 50px 0;
+	padding: 20px;
 }
 
-.article-title {
-	margin: auto;
+.recipe-header {
+	border-bottom: 1px rgba(255, 144, 59, .5) solid;
+}
+
+.recipe-title {
 	text-align: center;
+	font-size: 2em;
 }
 
-.account-img {
-	height: 125px;
-	width: 200px;
-	margin-right: 20px;
-	margin-bottom: 16px;
+.recipe-body {
+	
 }
 
-#profile-form {
-	display:none;
+#title {
+	text-align: center;
+	padding-top: 20px;
 }
+
+#nav-home {
+	font-size: 1.5rem;
+}
+
+
 
 
 
