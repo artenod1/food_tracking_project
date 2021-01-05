@@ -1,39 +1,68 @@
+/* Color Theme Swatches in Hex */
+.Prague-Flat-|-Interior-1-hex { color: #D7D7D9; }
+.Prague-Flat-|-Interior-2-hex { color: #A69992; }
+.Prague-Flat-|-Interior-3-hex { color: #402217; }
+.Prague-Flat-|-Interior-4-hex { color: #8C5C4A; }
+.Prague-Flat-|-Interior-5-hex { color: #260101; }
+
+/* Color Theme Swatches in RGBA */
+.Prague-Flat-|-Interior-1-rgba { color: rgba(214, 214, 216, 1); }
+.Prague-Flat-|-Interior-2-rgba { color: rgba(165, 153, 145, 1); }
+.Prague-Flat-|-Interior-3-rgba { color: rgba(63, 33, 22, 1); }
+.Prague-Flat-|-Interior-4-rgba { color: rgba(140, 91, 74, 1); }
+.Prague-Flat-|-Interior-5-rgba { color: rgba(38, 0, 0, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Prague-Flat-|-Interior-1-hsla { color: hsla(247, 2, 84, 1); }
+.Prague-Flat-|-Interior-2-hsla { color: hsla(22, 10, 61, 1); }
+.Prague-Flat-|-Interior-3-hsla { color: hsla(16, 47, 17, 1); }
+.Prague-Flat-|-Interior-4-hsla { color: hsla(16, 30, 42, 1); }
+.Prague-Flat-|-Interior-5-hsla { color: hsla(0, 96, 7, 1); }
+
+
 body {
-	background-color: rgba(255, 228, 194, .3);
-	color: rgb(255, 144, 59);
-	
+	background-color: rgba(38, 0, 0, .1);
 }
 
 
 
 a {
-	color: rgb(117, 91, 72);
+	/*color: #8C5C4A;*/
+	color: rgba(63, 33, 22, 1);
+	color: rgba(140, 91, 74, 1);
 }
 
 a:hover {
-	color: rgb(255, 144, 59);
+	/*color: rgb(255, 144, 59);*/
+	color: #F2913D;
 	text-decoration: none;
 }
 
+.site-header .navbar-nav .nav-link {
+  color: white;
+}
+
 .navbar-custom {
-	background-color: rgba(255, 228, 194, .8);
+	/*background-color: rgba(255, 228, 194, .8);*/
+	background-color: rgba(63, 33, 22, .7);;
 }
 
 .custom-nav-link {
 	margin-left: 5px;
 	margin-right: 5px;
+	color: white;
 }
 
 .recipe-content {
 	background-color: white;
-	border: .5px rgba(117, 91, 72, .3) solid;
+	border: 2px #8C8C8C solid;
 	border-radius: 10px;
 	margin: 50px 400px 50px 0;
 	padding: 20px;
 }
 
 .recipe-header {
-	border-bottom: 1px rgba(255, 144, 59, .5) solid;
+	border-bottom: 1px #8C8C8C solid;
 }
 
 .recipe-title {
@@ -48,6 +77,8 @@ a:hover {
 #title {
 	text-align: center;
 	padding-top: 20px;
+	color: rgb(117, 91, 72);
+
 }
 
 #nav-home {
